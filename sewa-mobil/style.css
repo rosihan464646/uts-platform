@@ -1,0 +1,58 @@
+/* Tema: Autobot Rental - Transformers | Ahmad Rosihan Efendi (NIM ...001) */
+:root{
+  --metal:#10151c; --panel:#1b2430; --line:#33415a;
+  --red:#e0302a; --blue:#3a78e0; --text:#e8edf5; --muted:#9aa8bd;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Arial,sans-serif;background:var(--metal);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+/* ===== Header & Navigasi ===== */
+header{background:var(--panel);border-bottom:4px solid var(--red)}
+.bar{max-width:1100px;margin:0 auto;padding:14px 16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:1.25rem;letter-spacing:.5px}
+.logo span{color:var(--red)}
+nav ul{list-style:none;display:flex;gap:6px}
+nav a{display:block;padding:8px 14px;border-radius:4px;color:var(--muted)}
+nav a:hover,nav a.aktif{background:var(--blue);color:#fff}
+
+main{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:1.9rem;margin-bottom:8px}
+h2{font-size:1.3rem;margin-bottom:12px}
+section{margin-bottom:32px}
+
+/* ===== Beranda ===== */
+.hero{background:linear-gradient(135deg,var(--panel),#243452);border-left:6px solid var(--blue);padding:28px 20px;border-radius:6px}
+.hero p{color:var(--muted);max-width:60ch;margin:8px 0 16px}
+.tombol{display:inline-block;background:var(--red);color:#fff;border:0;padding:10px 20px;border-radius:4px;font-weight:700;cursor:pointer;font-size:1rem}
+.tombol:hover{background:#b8231e}
+.statistik{display:grid;grid-template-columns:1fr;gap:12px}
+.stat{background:var(--panel);border:1px solid var(--line);padding:16px;border-radius:6px}
+.stat strong{display:block;font-size:1.6rem;color:var(--blue)}
+
+/* ===== Katalog: Mobile-First (HP = 1 kolom) ===== */
+.daftar-mobil{display:grid;grid-template-columns:1fr;gap:16px}
+.kartu{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--red);border-radius:6px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.kartu h3{font-size:1.15rem}
+.kartu .wujud{color:var(--muted);font-size:.9rem}
+.kartu .harga{color:var(--blue);font-weight:800;font-size:1.1rem;margin-top:auto}
+
+/* ===== Form ===== */
+form{background:var(--panel);border:1px solid var(--line);padding:20px;border-radius:6px;max-width:520px;display:grid;gap:16px}
+label{display:block;font-weight:600;margin-bottom:4px}
+input,select{width:100%;padding:10px;border-radius:4px;border:1px solid var(--line);background:var(--metal);color:var(--text);font-size:1rem}
+input:focus,select:focus{outline:2px solid var(--blue)}
+.pesan{padding:10px 12px;border-radius:4px;font-weight:600;display:none}
+.pesan.error{display:block;background:#4a1614;border:1px solid var(--red);color:#ffb4b0}
+.pesan.sukses{display:block;background:#12301f;border:1px solid #2e9e5b;color:#9be3b8}
+
+footer{text-align:center;color:var(--muted);padding:20px;border-top:1px solid var(--line)}
+
+/* ===== Desktop/PC (>= 768px): katalog 3 kolom ===== */
+@media (min-width:768px){
+  .daftar-mobil{grid-template-columns:repeat(3,1fr)}
+  .statistik{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ===== Foto mobil ===== */
+.kartu img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;background:var(--metal);margin-bottom:6px}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Penyewaan | Autobot Rental</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="logo" href="index.html">AUTOBOT <span>RENTAL</span></a>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="index.html" >Beranda</a></li>
+          <li><a href="katalog_001.html" >Katalog Mobil</a></li>
+          <li><a href="form_sewa_001.html" class="aktif">Form Penyewaan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section aria-labelledby="judul-form">
+      <h1 id="judul-form">Form Penyewaan</h1>
+      <form id="form-sewa" novalidate>
+        <div>
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" value="Ahmad Rosihan Efendi 001" placeholder="Nama Lengkap + 3 digit NIM" required>
+        </div>
+        <div>
+          <label for="mobil">Pilihan Mobil</label>
+          <select id="mobil" name="mobil" required>
+            <option value="">-- Pilih mobil --</option>
+            <option>Optimus Prime 001 - Rp 500.001/hari</option>
+            <option>Bumblebee 001 - Rp 350.001/hari</option>
+            <option>Ironhide 001 - Rp 450.001/hari</option>
+            <option>Jazz 001 - Rp 300.001/hari</option>
+            <option>Ratchet 001 - Rp 400.001/hari</option>
+            <option>Sideswipe 001 - Rp 475.001/hari</option>
+          </select>
+        </div>
+        <div>
+          <label for="lama">Lama Sewa (Hari)</label>
+          <input type="number" id="lama" name="lama" min="1" required>
+        </div>
+        <div id="pesan" class="pesan" role="alert"></div>
+        <button type="submit" class="tombol">Kirim Pesanan</button>
+      </form>
+    </section>
+  </main>
+  <footer>&copy; 2026 Autobot Rental &mdash; Ahmad Rosihan Efendi (NIM ...001)</footer>
+  <script src="script.js"></script>
+</body>
+</html>
